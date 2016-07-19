@@ -14,14 +14,14 @@ exports.config = {
     // Selenium Server Port. Default 4723
     seleniumPort     : 4723,
     // Absolute Path to selenium-server-standalone.jar file. If process is followed should be under [TEST_PROJECT_DIR]/node_modules/protractor/selenium/
-    seleniumServerJar: '[SELENIUM_SERVER_STANDALONE_JAR]',
+    seleniumServerJar: './node_modules/protractor/node_modules/webdriver-manager/selenium/selenium-server-standalone-2.53.1.jar',
     // If this is used then seleniumPort and seleniumServerJar should be commented.
     // directConnect    : true,
 
     // Please see: https://github.com/SeleniumHQ/selenium/wiki/DesiredCapabilities
     capabilities: {
         // android|chrome|firefox|htmlunit|internet explorer|iPhone|iPad|opera|safari
-        'browserName'  : '',
+        'browserName'  : 'chrome',
         // Please see: https://sites.google.com/a/chromium.org/chromedriver/
         'chromeOptions': {
             args: [
@@ -42,8 +42,7 @@ exports.config = {
 
     // Please use _[NUMBER] due to a change in Protractor way of loading suites. Now suites are alphabetically ordered
     suites: {
-        _01NAME: ['e2e/[PATH_TO_SPEC_FILE]'],
-        _02NAME: ['e2e/[PATH_TO_SPEC_FILE]', 'e2e/[PATH_TO_SPEC_FILE]']
+        _01NAME: ['e2e/tests/debug/debugDemo.spec.js']
     },
 
     onPrepare: function () {
@@ -78,11 +77,7 @@ exports.config = {
         browser.manage().timeouts().implicitlyWait(10000);
 
         // Set the size of the browser
-        browser.driver.manage().window().setSize(420, 840);
-
-        // Allow the app to bootstrap angular
-        browser.driver.get('[URL_OF_WEB_SITE_UNDER_TEST]');
-        browser.sleep(2000);
+        browser.driver.manage().window().setSize(1280, 720);
     },
 
     // Here can be stored any global parameters and their values in a MAP based format
