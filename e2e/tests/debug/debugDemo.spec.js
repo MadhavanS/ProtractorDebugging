@@ -9,7 +9,7 @@ describe('Search for information', function () {
 
     beforeEach(function() {
         browser.ignoreSynchronization = true;
-        browser.driver.get('http://google.com');
+        browser.driver.get('http://www.protractortest.org/#/api');
     });
 
     afterEach(function() {
@@ -20,6 +20,11 @@ describe('Search for information', function () {
         it('Should search for information', function () {
             var searchHomepage = new SearchHomepage();
             searchHomepage.search(data.criteria);
+        });
+
+        it('Information should be present', function () {
+            var searchHomepage = new SearchHomepage();
+            searchHomepage.validateResult(data.criteria);
         });
     });
 });
