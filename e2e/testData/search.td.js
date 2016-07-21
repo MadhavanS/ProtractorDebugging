@@ -3,6 +3,6 @@ module.exports = function plusProvider() {
         {criteria: "isPresent"},
         {criteria: "each"},
         {criteria: "findElements"},
-        {criteria: "bad"},
+        {criteria: "bad"}
     ];
 };
