@@ -38,5 +38,6 @@ change dir to _'/ProtractorDebugging/'_
 ### Debug:
 To debug your tests simply place breakpoints in any place needed within the code and use the above created Configuration to debug.
 
-![image](https://github.com/popescunsergiu/ProtractorDebugging/blob/master/assets/Webstorm04.png)
+![image](https://github.com/popescunsergiu/ProtractorDebugging/blob/master/assets/WebStormDebug01.gif)
+![image](https://github.com/popescunsergiu/ProtractorDebugging/blob/master/assets/WebStormDebug02.gif)
 
