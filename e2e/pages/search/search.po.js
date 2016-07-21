@@ -14,6 +14,7 @@ var SearchHomepage = function () {
     this.validateResult = function (criteria) {
         var exists = notificationsPageElems.searchResults.filter(function (elem, index) {
             return elem.getText().then(function (text) {
+                index;
                 return text === criteria;
             });
         }).first().isPresent();
