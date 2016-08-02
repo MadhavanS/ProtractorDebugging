@@ -8,12 +8,10 @@ var SearchHomepage = require("../../pages/search/search.po");
 describe('Search for information', function () {
 
     beforeEach(function() {
-        browser.ignoreSynchronization = true;
-        browser.driver.get('http://www.protractortest.org/#/api');
+        browser.driver.get('https://docs.angularjs.org/tutorial');
     });
 
     afterEach(function() {
-        browser.ignoreSynchronization = false;
     });
 
     using(searchProvider, function (data) {
